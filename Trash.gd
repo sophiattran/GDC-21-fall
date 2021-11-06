@@ -38,7 +38,6 @@ func free_self():
 
 func update_impulse():
 	var pos = player.position
-	pos.y -= 120
 	apply_impulse(Vector2.ZERO, (pos - position))
 	applying_impulse = false
 	$Timer.start()
