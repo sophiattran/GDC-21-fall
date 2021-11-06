@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 
 export (int) var run_speed = 200
-export (int) var jump_speed = -800
-export (int) var gravity = 1200
+export (int) var jump_speed = -1000
+export (int) var gravity = 2000
 export (int) var inertia =  50
 
 const throw_speed = Vector2(2000, 0)
