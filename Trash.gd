@@ -54,7 +54,10 @@ func fly_towards(pos, attraction_vector):
 		var degree = abs(rad2deg(dir_vector.angle_to(attraction_vector))) 
 		if degree>=0 and degree<45: #the range of effect = 90 degrees
 			apply_impulse(Vector2.ZERO, -dir_vector*10)
-			if distance < 250: queue_free() 
+			if distance < 250: 
+				#increase energy bar here
+				queue_free() 
+
 		
 		
 
