@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 export (int) var run_speed = 200
 export (int) var jump_speed = -1000
 export (int) var gravity = 2000
@@ -12,6 +11,9 @@ var velocity = Vector2()
 var jumping = false
 var trash = null
 
+func _ready():
+	position.y = 100
+	$AnimatedSprite.play("idle")
 
 func _physics_process(delta):
 	get_movement_input()
@@ -27,15 +29,13 @@ func _physics_process(delta):
 
 	if trash and Input.is_action_just_pressed("ui_accept"): 
 		throw_trash() 
-
-
+		
 func kinematic_rigid_interaction():
 	for index in get_slide_count(): 
 		var collision = get_slide_collision(index)
 		if collision.collider.is_in_group("trash"):
 			collision.collider.apply_central_impulse(-collision.normal * inertia)
-			
-			
+
 func get_movement_input():
 	velocity.x = 0
 	var right = Input.is_action_pressed("ui_right")
@@ -52,17 +52,11 @@ func get_movement_input():
 	if velocity.x != 0:
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.flip_h = velocity.x < 0
-	
-	
-func _ready():
-	position.y = 100
-	$AnimatedSprite.play("idle")
 
 
 func lift_trash(obj):
 	$AnimatedSprite.play("lift")
 	trash = obj
-	
 	
 func throw_trash():
 	trash.free_self()
@@ -70,10 +64,14 @@ func throw_trash():
 		trash.apply_impulse(Vector2.ZERO, -throw_speed)
 	else:
 		trash.apply_impulse(Vector2.ZERO, throw_speed)
-	
 	trash = null
 	$AnimatedSprite.play("idle")
 
 
-
-
+	
+	
+	
+	
+	
+	
+	

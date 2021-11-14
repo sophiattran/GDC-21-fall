@@ -12,3 +12,6 @@ func _on_TrashTimer_timeout():
 	add_child(trash)
 	trash.position = $TrashPath/TrashSpawnLocation.position
 	
+
+
+	

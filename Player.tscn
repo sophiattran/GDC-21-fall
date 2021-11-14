@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Vacuum.tscn" type="PackedScene" id=2]
 [ext_resource path="res://greenkid.svg" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -10,13 +11,13 @@ radius = 16.3901
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "idle",
-"speed": 1.0
+"name": "lift",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "lift",
-"speed": 5.0
+"name": "idle",
+"speed": 1.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
@@ -37,4 +38,6 @@ playing = true
 offset = Vector2( 0, -150 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
-limit_top = -50
+limit_top = 30
+
+[node name="vacuum" parent="." instance=ExtResource( 2 )]
