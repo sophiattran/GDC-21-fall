@@ -5,6 +5,7 @@ var being_lifted = false
 var applying_impulse = false
 
 onready var player = $"../Player" #move up the node tree one level and access Player node
+onready var gauge = $'/root/World/GUI/HBoxContainer/Bar/Gauge'
 
 func _physics_process(delta):
 	if position.y > 1000: queue_free() #remove self from scene after falling into the void
@@ -56,6 +57,7 @@ func fly_towards(pos, attraction_vector):
 			apply_impulse(Vector2.ZERO, -dir_vector*10)
 			if distance < 250: 
 				#increase energy bar here
+				gauge.update_energy_bar()
 				queue_free() 
 
 		

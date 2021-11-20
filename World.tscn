@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://terrain.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World.gd" type="Script" id=3]
 [ext_resource path="res://Trash.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -28,5 +29,11 @@ curve = SubResource( 1 )
 [node name="TrashSpawnLocation" type="PathFollow2D" parent="TrashPath"]
 position = Vector2( -2153.82, -1002.61 )
 rotation = -0.00186112
+
+[node name="GUI" parent="." instance=ExtResource( 5 )]
+margin_left = -732.0
+margin_top = -94.0
+margin_right = -192.0
+margin_bottom = -1.0
 
 [connection signal="timeout" from="TrashTimer" to="." method="_on_TrashTimer_timeout"]
