@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var run_speed = 200
+export (int) var run_speed = 300
 export (int) var jump_speed = -1000
 export (int) var gravity = 2000
 export (int) var inertia =  50
@@ -13,6 +13,7 @@ var trash = null
 
 func _ready():
 	position.y = 100
+	position.x = -2000
 	$AnimatedSprite.play("idle")
 
 func _physics_process(delta):
@@ -22,7 +23,6 @@ func _physics_process(delta):
 	velocity.y += gravity*delta 
 	
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
-	
 	
 	if jumping and is_on_floor():
 		jumping = false
@@ -53,7 +53,6 @@ func get_movement_input():
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.flip_h = velocity.x < 0
 
-
 func lift_trash(obj):
 	$AnimatedSprite.play("lift")
 	trash = obj
@@ -66,12 +65,3 @@ func throw_trash():
 		trash.apply_impulse(Vector2.ZERO, throw_speed)
 	trash = null
 	$AnimatedSprite.play("idle")
-
-
-	
-	
-	
-	
-	
-	
-	

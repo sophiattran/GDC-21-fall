@@ -4,14 +4,13 @@ export (PackedScene) var Trash
 
 func _ready():
 	randomize()
-	
 
-func _on_TrashTimer_timeout():
-	$TrashPath/TrashSpawnLocation.offset = randi()
+func spawnTrash(pos, impulse): 
 	var trash = Trash.instance()
 	add_child(trash)
-	trash.position = $TrashPath/TrashSpawnLocation.position
+	trash.position = pos
+	trash.apply_impulse(Vector2.ZERO, impulse)
 	
-
-
+	
+	
 	
