@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://abstract-platformer-370-assets/PNG/Other/flagGreen_down.png" type="Texture" id=1]
+[ext_resource path="res://vacuum.svg" type="Texture" id=1]
 [ext_resource path="res://vacumn.gd" type="Script" id=2]
 
 [node name="vacuum" type="Sprite"]
 position = Vector2( -10, 80 )
-scale = Vector2( 3.67787, 3.7727 )
+scale = Vector2( 1.2, 1.2 )
 z_index = 2
 texture = ExtResource( 1 )
 offset = Vector2( 8, 30 )

@@ -11,6 +11,8 @@ var velocity = Vector2()
 var jumping = false
 var trash = null
 
+onready var gauge = $'/root/Game/CanvasLayer/GUI/HBoxContainer/Bar/Gauge'
+
 func _ready():
 	position.y = 100
 	position.x = -2000
@@ -41,10 +43,11 @@ func get_movement_input():
 	var right = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
 	var jump = Input.is_action_just_pressed("ui_up")
-	
+
 	if jump and is_on_floor():
 		jumping = true
 		velocity.y = jump_speed
+		
 	if right:
 		velocity.x = run_speed
 	if left:
@@ -56,7 +59,7 @@ func get_movement_input():
 func lift_trash(obj):
 	$AnimatedSprite.play("lift")
 	trash = obj
-	
+
 func throw_trash():
 	trash.free_self()
 	if $AnimatedSprite.flip_h:

@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://terrain.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World.gd" type="Script" id=3]
 [ext_resource path="res://Trash.tscn" type="PackedScene" id=4]
 [ext_resource path="res://TrashMonster.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 3 )
@@ -20,9 +19,3 @@ autostart = true
 
 [node name="TrashMonster" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1800, 200 )
-
-[node name="GUI" parent="." instance=ExtResource( 6 )]
-margin_left = -728.0
-margin_top = -370.0
-margin_right = -188.0
-margin_bottom = -277.0
