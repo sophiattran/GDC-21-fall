@@ -7,9 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.1366, 32.3729 )
 
-[node name="Trash" type="RigidBody2D" groups=[
-"trash",
-]]
+[node name="Trash" type="RigidBody2D" groups=["trash"]]
 input_pickable = true
 gravity_scale = 2.0
 script = ExtResource( 2 )
