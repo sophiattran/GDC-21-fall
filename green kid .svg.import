@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/greenkid.svg-8bb1648ac9b1c5d5e90f30a9c04f84a1.stex"
+path="res://.import/green kid .svg-0ec93fd30f0888bcb6d635332793fa87.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greenkid.svg"
-dest_files=[ "res://.import/greenkid.svg-8bb1648ac9b1c5d5e90f30a9c04f84a1.stex" ]
+source_file="res://green kid .svg"
+dest_files=[ "res://.import/green kid .svg-0ec93fd30f0888bcb6d635332793fa87.stex" ]
 
 [params]
 

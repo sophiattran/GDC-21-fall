@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Vacuum.tscn" type="PackedScene" id=2]
-[ext_resource path="res://greenkid.svg" type="Texture" id=3]
+[ext_resource path="res://green kid .svg" type="Texture" id=3]
+[ext_resource path="res://vacuum.svg" type="Texture" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.3901
@@ -41,3 +42,7 @@ zoom = Vector2( 5, 5 )
 limit_left = -2500
 
 [node name="vacuum" parent="." instance=ExtResource( 2 )]
+position = Vector2( -43.9774, -77.1456 )
+rotation = 0.338594
+scale = Vector2( 0.92, 0.943 )
+texture = ExtResource( 5 )
