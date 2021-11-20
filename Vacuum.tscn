@@ -5,7 +5,7 @@
 
 [node name="vacuum" type="Sprite"]
 position = Vector2( -10, 80 )
-scale = Vector2( 1.2, 1.2 )
+scale = Vector2( 3.67787, 3.7727 )
 z_index = 2
 texture = ExtResource( 1 )
 offset = Vector2( 8, 30 )
